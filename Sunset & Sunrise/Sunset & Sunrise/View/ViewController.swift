@@ -29,23 +29,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //accessing user location
-        checkLocationservices()
-        
         //default date - current
-        selectedDate = datePicker.date
+        self.selectedDate = datePicker.date
         
-        //default location - user's location
-        if let location = locationManager.location {
-            
-            let latitude = location.coordinate.latitude
-            let longitude = location.coordinate.longitude
-            
-            selectedLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        }
+        //accessing user location
+        self.setupLocationManager()
+        self.locationManager.requestLocation()
         
-        //fetching data
-        fetchInfo()
     }
     
     fileprivate func updateLabelsWith(_ receivedInfo: (SunriseSunset)) {
@@ -94,6 +84,9 @@ class ViewController: UIViewController {
                 default: break
                 }
             }
+        } else {
+            //accessing user location
+            self.checkLocationAuthorization()
         }
     }
     
@@ -120,7 +113,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func refreshTapped(_ sender: Any) {
-        fetchInfo()
+        self.fetchInfo()
     }
 }
 
@@ -128,11 +121,10 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
     
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        
         dismiss(animated: true, completion: nil)
-        self.selectedLocation = place.coordinate
         
-        fetchInfo()
+        self.selectedLocation = place.coordinate
+        self.fetchInfo()
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
@@ -161,8 +153,6 @@ extension ViewController : CLLocationManagerDelegate {
         switch CLLocationManager.authorizationStatus(){
         case .authorizedWhenInUse:
             self.selectedLocation = locationManager.location?.coordinate
-            self.locationManager.startUpdatingLocation()
-            self.fetchInfo()
             break
             
         case .denied:
@@ -170,7 +160,7 @@ extension ViewController : CLLocationManagerDelegate {
             break
             
         case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
+            self.locationManager.requestWhenInUseAuthorization()
             
         case .restricted:
             self.createAlert(title: "Couldn't get your location", message: "This app is not authorized to use location services possibly due to active restrictions such as parental control.")
@@ -182,21 +172,21 @@ extension ViewController : CLLocationManagerDelegate {
     }
     
     func setupLocationManager() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-    }
-    
-    func checkLocationservices() {
-        if CLLocationManager.locationServicesEnabled() {
-            setupLocationManager()
-            checkLocationAuthorization()
-        } else {
-            self.createAlert(title: "Couldn't get your location", message: "Location services are currently disabled in Settings.")
-        }
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkLocationAuthorization()
+        self.checkLocationAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error:: \(error.localizedDescription)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.selectedLocation = locationManager.location?.coordinate
+        self.fetchInfo()
     }
 }
 

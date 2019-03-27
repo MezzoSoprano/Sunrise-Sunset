@@ -52,7 +52,6 @@ final class APISunriseSunsetManager: APIManager {
     }
     
     func fetchCurrentInfoWith(coordinates: Coordinates, completionHandler: @escaping (APIResult<SunriseSunset>) -> Void) {
-        
         let request = SunriseSunsetTypeURL.Current(coordinates: coordinates).request
         
         fetch(request: request, parse: { (json) -> SunriseSunset? in
