@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38253C79824A85D021A308D3 /* Pods_Sunset___Sunrise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83392A4F9B6FBD48B76C4EE3 /* Pods_Sunset___Sunrise.framework */; };
 		764CBF232249325F009755FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CBF222249325F009755FF /* AppDelegate.swift */; };
-		764CBF252249325F009755FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CBF242249325F009755FF /* ViewController.swift */; };
+		764CBF252249325F009755FF /* SunriseSunsetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CBF242249325F009755FF /* SunriseSunsetViewController.swift */; };
 		764CBF282249325F009755FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764CBF262249325F009755FF /* Main.storyboard */; };
 		764CBF2A22493262009755FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764CBF2922493262009755FF /* Assets.xcassets */; };
 		764CBF3922495EE8009755FF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CBF3822495EE8009755FF /* APIManager.swift */; };
-		764CBF3C22496614009755FF /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CBF3B22496614009755FF /* ErrorManager.swift */; };
+		764CBF3C22496614009755FF /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CBF3B22496614009755FF /* NetworkingError.swift */; };
 		764CBF3E224972A9009755FF /* APISunriseSunsetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CBF3D224972A9009755FF /* APISunriseSunsetManager.swift */; };
 		764CBF40224973DE009755FF /* SunriseSunset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CBF3F224973DE009755FF /* SunriseSunset.swift */; };
 		76A73E3C224AF9E00085FB11 /* Sunset_SunriseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A73E3B224AF9E00085FB11 /* Sunset_SunriseTests.swift */; };
 		76A73E44224AFB810085FB11 /* FetchedInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A73E43224AFB810085FB11 /* FetchedInfoTests.swift */; };
 		76A73E46224B026D0085FB11 /* DateToLocalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A73E45224B026D0085FB11 /* DateToLocalFormatter.swift */; };
 		76B6FEAA224A425700FC5F58 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B6FEA9224A425700FC5F58 /* UIViewControllerExtension.swift */; };
+		7789B1F9A0F97E370756CE2A /* Pods_Sunset___Sunrise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E531035D71ACBBC4A11D353D /* Pods_Sunset___Sunrise.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +33,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46615497B5DE6A5F09EC3EF0 /* Pods-Sunset & Sunrise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunset & Sunrise.release.xcconfig"; path = "Target Support Files/Pods-Sunset & Sunrise/Pods-Sunset & Sunrise.release.xcconfig"; sourceTree = "<group>"; };
-		7392AF508C038AD2D1768513 /* Pods-Sunset & Sunrise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunset & Sunrise.debug.xcconfig"; path = "Target Support Files/Pods-Sunset & Sunrise/Pods-Sunset & Sunrise.debug.xcconfig"; sourceTree = "<group>"; };
+		25D3AF00E056BB5CC4D46931 /* Pods-Sunset & Sunrise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunset & Sunrise.release.xcconfig"; path = "Target Support Files/Pods-Sunset & Sunrise/Pods-Sunset & Sunrise.release.xcconfig"; sourceTree = "<group>"; };
 		764CBF1F2249325F009755FF /* Sunset & Sunrise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sunset & Sunrise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		764CBF222249325F009755FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		764CBF242249325F009755FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		764CBF242249325F009755FF /* SunriseSunsetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunriseSunsetViewController.swift; sourceTree = "<group>"; };
 		764CBF272249325F009755FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		764CBF2922493262009755FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		764CBF2E22493262009755FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		764CBF3822495EE8009755FF /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		764CBF3B22496614009755FF /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		764CBF3B22496614009755FF /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		764CBF3D224972A9009755FF /* APISunriseSunsetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISunriseSunsetManager.swift; sourceTree = "<group>"; };
 		764CBF3F224973DE009755FF /* SunriseSunset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunriseSunset.swift; sourceTree = "<group>"; };
 		76A73E39224AF9E00085FB11 /* Sunset&SunriseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sunset&SunriseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +50,8 @@
 		76A73E43224AFB810085FB11 /* FetchedInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedInfoTests.swift; sourceTree = "<group>"; };
 		76A73E45224B026D0085FB11 /* DateToLocalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToLocalFormatter.swift; sourceTree = "<group>"; };
 		76B6FEA9224A425700FC5F58 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		83392A4F9B6FBD48B76C4EE3 /* Pods_Sunset___Sunrise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Sunset___Sunrise.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FF0378E36AD7E3ADD56E40 /* Pods-Sunset & Sunrise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunset & Sunrise.debug.xcconfig"; path = "Target Support Files/Pods-Sunset & Sunrise/Pods-Sunset & Sunrise.debug.xcconfig"; sourceTree = "<group>"; };
+		E531035D71ACBBC4A11D353D /* Pods_Sunset___Sunrise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Sunset___Sunrise.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38253C79824A85D021A308D3 /* Pods_Sunset___Sunrise.framework in Frameworks */,
+				7789B1F9A0F97E370756CE2A /* Pods_Sunset___Sunrise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +73,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A1BF830A2FC6F4FD23F7686 /* Frameworks */ = {
+		76054427225243D50018EAEB /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				83392A4F9B6FBD48B76C4EE3 /* Pods_Sunset___Sunrise.framework */,
+				764CBF2922493262009755FF /* Assets.xcassets */,
+				764CBF2E22493262009755FF /* Info.plist */,
 			);
-			name = Frameworks;
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		7605442E22525A200018EAEB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				764CBF3822495EE8009755FF /* APIManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		764CBF162249325F009755FF = {
@@ -88,7 +97,7 @@
 				76A73E3A224AF9E00085FB11 /* Sunset&SunriseTests */,
 				764CBF202249325F009755FF /* Products */,
 				986C729315A13E7B21F48074 /* Pods */,
-				1A1BF830A2FC6F4FD23F7686 /* Frameworks */,
+				9DAA42A09DA3151F719D2F86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,13 +113,9 @@
 		764CBF212249325F009755FF /* Sunset & Sunrise */ = {
 			isa = PBXGroup;
 			children = (
-				764CBF3622495E26009755FF /* Model */,
-				764CBF3522495E1E009755FF /* View */,
-				764CBF3422495E15009755FF /* Controller */,
-				764CBF3722495E70009755FF /* Networking */,
-				76B6FEA8224A3E9C00FC5F58 /* Extensions */,
-				764CBF2922493262009755FF /* Assets.xcassets */,
-				764CBF2E22493262009755FF /* Info.plist */,
+				76DEE9CD2253CD5800828DE4 /* Application */,
+				76DEE9D12253CDF300828DE4 /* SunriseSunsetTime */,
+				76054427225243D50018EAEB /* Supporting files */,
 			);
 			path = "Sunset & Sunrise";
 			sourceTree = "<group>";
@@ -118,20 +123,10 @@
 		764CBF3422495E15009755FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				764CBF3D224972A9009755FF /* APISunriseSunsetManager.swift */,
+				764CBF242249325F009755FF /* SunriseSunsetViewController.swift */,
 				76A73E45224B026D0085FB11 /* DateToLocalFormatter.swift */,
-				764CBF222249325F009755FF /* AppDelegate.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		764CBF3522495E1E009755FF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				764CBF242249325F009755FF /* ViewController.swift */,
-				764CBF262249325F009755FF /* Main.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		764CBF3622495E26009755FF /* Model */ = {
@@ -140,15 +135,6 @@
 				764CBF3F224973DE009755FF /* SunriseSunset.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		764CBF3722495E70009755FF /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				764CBF3822495EE8009755FF /* APIManager.swift */,
-				764CBF3B22496614009755FF /* ErrorManager.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		76A73E3A224AF9E00085FB11 /* Sunset&SunriseTests */ = {
@@ -169,13 +155,75 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		76DEE9CD2253CD5800828DE4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				76DEE9CE2253CD9700828DE4 /* Model */,
+				76DEE9CF2253CD9D00828DE4 /* View */,
+				76DEE9D02253CDA300828DE4 /* Controller */,
+				7605442E22525A200018EAEB /* Networking */,
+				76B6FEA8224A3E9C00FC5F58 /* Extensions */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		76DEE9CE2253CD9700828DE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				764CBF3B22496614009755FF /* NetworkingError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76DEE9CF2253CD9D00828DE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				764CBF262249325F009755FF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76DEE9D02253CDA300828DE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				764CBF222249325F009755FF /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		76DEE9D12253CDF300828DE4 /* SunriseSunsetTime */ = {
+			isa = PBXGroup;
+			children = (
+				764CBF3622495E26009755FF /* Model */,
+				764CBF3422495E15009755FF /* Controller */,
+				76DEE9D22253CE9A00828DE4 /* SunriseSunsetNetworking */,
+			);
+			path = SunriseSunsetTime;
+			sourceTree = "<group>";
+		};
+		76DEE9D22253CE9A00828DE4 /* SunriseSunsetNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				764CBF3D224972A9009755FF /* APISunriseSunsetManager.swift */,
+			);
+			path = SunriseSunsetNetworking;
+			sourceTree = "<group>";
+		};
 		986C729315A13E7B21F48074 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7392AF508C038AD2D1768513 /* Pods-Sunset & Sunrise.debug.xcconfig */,
-				46615497B5DE6A5F09EC3EF0 /* Pods-Sunset & Sunrise.release.xcconfig */,
+				B5FF0378E36AD7E3ADD56E40 /* Pods-Sunset & Sunrise.debug.xcconfig */,
+				25D3AF00E056BB5CC4D46931 /* Pods-Sunset & Sunrise.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9DAA42A09DA3151F719D2F86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E531035D71ACBBC4A11D353D /* Pods_Sunset___Sunrise.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,11 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 764CBF3122493262009755FF /* Build configuration list for PBXNativeTarget "Sunset & Sunrise" */;
 			buildPhases = (
-				A5EB33E40783E8AC7C54C0CE /* [CP] Check Pods Manifest.lock */,
+				69939C4B4273BA314EBF4035 /* [CP] Check Pods Manifest.lock */,
 				764CBF1B2249325F009755FF /* Sources */,
 				764CBF1C2249325F009755FF /* Frameworks */,
 				764CBF1D2249325F009755FF /* Resources */,
-				B5DCC6D3E9E45D8C107C7EDA /* [CP] Copy Pods Resources */,
+				AF078203E66DE8819A3FDFE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,7 +324,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A5EB33E40783E8AC7C54C0CE /* [CP] Check Pods Manifest.lock */ = {
+		69939C4B4273BA314EBF4035 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,7 +346,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B5DCC6D3E9E45D8C107C7EDA /* [CP] Copy Pods Resources */ = {
+		AF078203E66DE8819A3FDFE1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,8 +379,8 @@
 			files = (
 				764CBF3922495EE8009755FF /* APIManager.swift in Sources */,
 				764CBF40224973DE009755FF /* SunriseSunset.swift in Sources */,
-				764CBF252249325F009755FF /* ViewController.swift in Sources */,
-				764CBF3C22496614009755FF /* ErrorManager.swift in Sources */,
+				764CBF252249325F009755FF /* SunriseSunsetViewController.swift in Sources */,
+				764CBF3C22496614009755FF /* NetworkingError.swift in Sources */,
 				764CBF232249325F009755FF /* AppDelegate.swift in Sources */,
 				76A73E46224B026D0085FB11 /* DateToLocalFormatter.swift in Sources */,
 				76B6FEAA224A425700FC5F58 /* UIViewControllerExtension.swift in Sources */,
@@ -489,12 +537,12 @@
 		};
 		764CBF3222493262009755FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7392AF508C038AD2D1768513 /* Pods-Sunset & Sunrise.debug.xcconfig */;
+			baseConfigurationReference = B5FF0378E36AD7E3ADD56E40 /* Pods-Sunset & Sunrise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDC5DNJKVL;
-				INFOPLIST_FILE = "Sunset & Sunrise/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sunset & Sunrise/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,12 +557,12 @@
 		};
 		764CBF3322493262009755FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46615497B5DE6A5F09EC3EF0 /* Pods-Sunset & Sunrise.release.xcconfig */;
+			baseConfigurationReference = 25D3AF00E056BB5CC4D46931 /* Pods-Sunset & Sunrise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDC5DNJKVL;
-				INFOPLIST_FILE = "Sunset & Sunrise/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sunset & Sunrise/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -12,20 +12,17 @@ typealias DataTask = URLSessionDataTask
 typealias DataCompletionHandler = (Data?, HTTPURLResponse?, Error?) -> Void
 
 protocol FinalURLPoint {
-    
     var baseURL: URL { get }
     var path: String { get }
     var request: URLRequest { get }
 }
 
 enum APIResult<T> {
-    
     case Success(T)
     case Failure(Error)
 }
 
 protocol APIManager {
-    
     var sessionConfiguration: URLSessionConfiguration { get }
     var session: URLSession { get }
     
@@ -34,7 +31,6 @@ protocol APIManager {
 }
 
 extension APIManager {
-    
     func JSONTaskWith(request: URLRequest, completionHandler: @escaping DataCompletionHandler) -> DataTask {
         
         let dataTask = session.dataTask(with: request) { (data, response, error) in
@@ -67,7 +63,6 @@ extension APIManager {
     }
     
     func fetch<T>(request: URLRequest, parse: @escaping (Data) -> T?, completionHandler: @escaping (APIResult<T>) -> Void) {
-        
         let dataTask = JSONTaskWith(request: request) { (data, response, error) in
             
             DispatchQueue.main.async(execute: {

@@ -6,11 +6,10 @@
 //  Copyright © 2019 mezzoSoprano. All rights reserved.
 //
 
-import UIKit
 import GooglePlaces
 import CoreLocation
 
-class ViewController: UIViewController {
+class SunriseSunsetViewController: UIViewController {
     
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var dayLengthLabel: UILabel!
@@ -35,7 +34,6 @@ class ViewController: UIViewController {
         //accessing user location
         self.setupLocationManager()
         self.locationManager.requestLocation()
-        
     }
     
     fileprivate func updateLabelsWith(_ receivedInfo: (SunriseSunset)) {
@@ -117,7 +115,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: GMSAutocompleteViewControllerDelegate {
+extension SunriseSunsetViewController: GMSAutocompleteViewControllerDelegate {
     
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
@@ -147,12 +145,11 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
     }
 }
 
-extension ViewController : CLLocationManagerDelegate {
+extension SunriseSunsetViewController : CLLocationManagerDelegate {
     
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus(){
         case .authorizedWhenInUse:
-            self.selectedLocation = locationManager.location?.coordinate
             break
             
         case .denied:
