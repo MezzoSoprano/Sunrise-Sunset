@@ -9,11 +9,13 @@
 import Foundation
 
 struct Coordinates {
+    
     let latitude: Double
     let longitute: Double
 }
 
 enum SunriseSunsetTypeURL: FinalURLPoint {
+    
     case Current(coordinates: Coordinates)
     case WithDate(coordinates: Coordinates, date: Date)
     

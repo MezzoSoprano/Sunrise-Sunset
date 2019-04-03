@@ -9,6 +9,7 @@
 import Foundation
 
 struct SunriseSunset: Codable {
+    
     let info: SunriseSunsetInfo?
     
     private enum CodingKeys: String, CodingKey {

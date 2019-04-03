@@ -36,25 +36,19 @@ class SunriseSunsetViewController: UIViewController {
         self.locationManager.requestLocation()
     }
     
-    fileprivate func updateLabelsWith(_ receivedInfo: (SunriseSunset)) {
+    fileprivate func updateLabelsWith(_ receivedInfo: SunriseSunset) {
         if let location = self.selectedLocation {
             let geocoder = CLGeocoder()
             geocoder.reverseGeocodeLocation(CLLocation(latitude: location.latitude, longitude: location.longitude), completionHandler: { (placemarks, error) -> Void in
-                
                 if let place = placemarks?[0] {
+                    let place = Place(name: place.name, timeZone: place.timeZone)
+                    let sunriseSunsetViewModel = SunriseSunsetViewModel(info: receivedInfo.info, place: place)
                     
-                    let timeZone = place.timeZone
-                    let sunriseLocalTime = DateToLocalFormatter.UTCToLocal(date: receivedInfo.info?.sunriseDate ?? "", timeZone: timeZone ?? .current)
-                    let sunsetLocalTime = DateToLocalFormatter.UTCToLocal(date: receivedInfo.info?.sunsetDate ?? "", timeZone: timeZone ?? .current)
-                    let twilightEndTime = DateToLocalFormatter.UTCToLocal(date: receivedInfo.info?.twilightEndDate ?? "", timeZone: timeZone ?? .current)
-                    let twilightBeginTime = DateToLocalFormatter.UTCToLocal(date: receivedInfo.info?.twilightBeginDate ?? "", timeZone: timeZone ?? .current)
-                    
-                    
-                    self.dayLengthLabel.text = "🌞 " + (receivedInfo.info?.dayLength ?? "")
-                    self.sunriseTimeLabel.text = "🌇 " + sunriseLocalTime
-                    self.sunsetTimeLabel.text = "🌅 " + sunsetLocalTime
-                    self.twilightEndTimeLabel.text = "🌘 " + twilightEndTime
-                    self.twilightBeginTimeLabel.text = "🌖 " + twilightBeginTime
+                    self.dayLengthLabel.text = sunriseSunsetViewModel.dayLength
+                    self.sunriseTimeLabel.text = sunriseSunsetViewModel.sunriseLocalTime
+                    self.sunsetTimeLabel.text = sunriseSunsetViewModel.sunsetLocalTime
+                    self.twilightEndTimeLabel.text = sunriseSunsetViewModel.twilightEndLocalTime
+                    self.twilightBeginTimeLabel.text = sunriseSunsetViewModel.twilightBeginLocalTime
                     self.locationNameLabel.text = place.name
                     
                 } else {
