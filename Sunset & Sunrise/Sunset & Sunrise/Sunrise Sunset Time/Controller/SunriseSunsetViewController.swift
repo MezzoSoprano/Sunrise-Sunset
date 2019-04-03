@@ -49,7 +49,7 @@ class SunriseSunsetViewController: UIViewController {
                     self.sunsetTimeLabel.text = sunriseSunsetViewModel.sunsetLocalTime
                     self.twilightEndTimeLabel.text = sunriseSunsetViewModel.twilightEndLocalTime
                     self.twilightBeginTimeLabel.text = sunriseSunsetViewModel.twilightBeginLocalTime
-                    self.locationNameLabel.text = place.name
+                    self.locationNameLabel.text = sunriseSunsetViewModel.locationName
                     
                 } else {
                     if let gError = error {
